@@ -20,6 +20,17 @@ android {
             applicationIdSuffix ".debug"
         }
     }
+
+    productFlavors {
+        // Free version
+        free {
+            applicationId = "oi.caster.wickedcool"
+        }
+        // pro version
+        pro {
+            applicationId = "oi.caster.wickedcool.pro"
+        }
+    }
 }
 
 dependencies {
