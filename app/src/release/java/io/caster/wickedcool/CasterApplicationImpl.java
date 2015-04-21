@@ -5,6 +5,6 @@ public class CasterApplicationImpl extends CasterApplication {
     public void init() {
 
         // Crashlytics.start(...);
-        // Implement release level logging mechanism like Timer release stuff.
+        // Implement release level logging mechanism like Timber release stuff.
     }
 }

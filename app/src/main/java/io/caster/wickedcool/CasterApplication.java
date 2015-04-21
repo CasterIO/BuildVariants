@@ -9,6 +9,7 @@ public abstract class CasterApplication extends Application {
     @Override
     public void onCreate() {
         super.onCreate();
+        init();
     }
 
 
