@@ -1,1 +1,2 @@
-include ':app'
+include ':WickedCool'
+project(':WickedCool').projectDir = new File('app')

@@ -1,13 +1,13 @@
 apply plugin: 'com.android.application'
 
 android {
-    compileSdkVersion 21
-    buildToolsVersion "21.1.2"
+    compileSdkVersion 26
+    buildToolsVersion '26.0.2'
 
     defaultConfig {
         applicationId "io.caster.wickedcool"
         minSdkVersion 15
-        targetSdkVersion 21
+        targetSdkVersion 26
         versionCode 1
         versionName "1.0"
     }
@@ -16,10 +16,41 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
+        debug {
+            applicationIdSuffix ".debug"
+        }
+    }
+
+    flavorDimensions "CasterIO"
+
+    productFlavors {
+        // Free version
+        free {
+            applicationId = "oi.caster.wickedcool"
+            dimension = "CasterIO"
+            manifestPlaceholders = [
+                    appName: "WickedCool",
+                    //providerAuthority: "io.caster.wickedcool.CasterContentProvider"
+            ]
+        }
+        // pro version
+        pro {
+            applicationId = "oi.caster.wickedcool.pro"
+            dimension = "CasterIO"
+            manifestPlaceholders = [
+                    appName: "WickedCool Pro"
+                    //providerAuthority: "io.caster.wickedcool.pro.CasterContentProvider"
+
+            ]
+        }
     }
 }
 
 dependencies {
-    compile fileTree(dir: 'libs', include: ['*.jar'])
-    compile 'com.android.support:appcompat-v7:21.0.3'
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:26.1.0'
+}
+
+repositories {
+    google()
 }
