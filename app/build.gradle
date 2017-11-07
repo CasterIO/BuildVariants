@@ -25,10 +25,19 @@ android {
         // Free version
         free {
             applicationId = "oi.caster.wickedcool"
+            manifestPlaceholders = [
+                    appName: "WickedCool",
+                    //providerAuthority: "io.caster.wickedcool.CasterContentProvider"
+            ]
         }
         // pro version
         pro {
             applicationId = "oi.caster.wickedcool.pro"
+            manifestPlaceholders = [
+                    appName: "WickedCool Pro"
+                    //providerAuthority: "io.caster.wickedcool.pro.CasterContentProvider"
+
+            ]
         }
     }
 }
